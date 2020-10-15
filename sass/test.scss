@@ -1,0 +1,130 @@
+@import "ob";
+@import "reset";
+
+body{
+    background-color: lightyellow;
+    header{
+        @include lineGradient(khaki,100%,'T');
+        height: 100px;
+        ul{
+            display: flex;
+            flex-direction: row;
+
+        }
+    }
+
+    #pizza{
+        position: fixed;
+        width: 400px;
+        right: 100px;
+        transform: rotate(45deg);
+        z-index: -1;
+        opacity:.3;
+
+    }
+    #ham{
+        position: fixed;
+        width: 500px;
+        bottom: 0px;
+        left: 50px;
+        z-index: -1;
+
+    }
+
+    .content{
+        @include box(1200px,0);
+        h2{
+            font-size: 18px;
+        }
+
+        #introduction{
+            display: flex;
+            flex-direction: row;
+            @include box(100%,0);
+            .container{
+                #imgs{
+                    .large{
+                        position: relative;
+                        margin: 4px 0;
+                        @include box(600px,0);
+                        img{
+                            display: inline-block;
+                            position: absolute;
+                            left: 50%;
+                            transform: translate(-50%,0);
+                            @include box(600px,0);
+                        }
+                    }
+                    .small{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                        // @include borderT;
+                        @include box(100%,0);
+                        font-size: 0;
+                        overflow: auto;
+                        img:nth-child(1){
+                            margin-left: 0;
+                        }
+                        img{
+                            margin: 5px 5px;
+                            cursor: pointer;
+                            width: 200px;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+            #detail{
+                @include box(400px,0);
+
+                .Lbutton{
+                    @include Lbutton(16px,green);
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+        }
+        #leavemessage{
+            @include borderT;
+            @include box(1200px,0);
+            height: 400px;
+            overflow: auto;
+            .L{
+                @include borderT;
+                @include box(90%,0);
+                margin: 20px;   
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+
+                img{
+                    border-radius: 50%;
+                    // width: 40px;
+                    // height: 40px;
+                    margin: 20px;
+                }
+                p{
+                    border: 1px solid black;
+                }
+            }
+        }
+
+        #send{
+            textarea{
+                @include box(800px,0);
+                margin-top: 10px;
+                resize: none;
+            }
+        }
+    }
+
+    footer{
+        @include lineGradient(khaki,100%,'B');
+        height: 100px;
+
+    }
+
+}
