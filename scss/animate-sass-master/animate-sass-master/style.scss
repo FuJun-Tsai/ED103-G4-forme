@@ -1,0 +1,11 @@
+// @include animate-prefixer(animation-name, slideInUp);
+// .slideInDown {
+//     @include animate-keyframe($animation-name);
+// }
+@import "./animate";
+.aa {
+    display: inline-block;
+    background-color: red;
+}
+
+//
