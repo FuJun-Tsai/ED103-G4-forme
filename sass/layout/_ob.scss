@@ -1,0 +1,38 @@
+//search
+
+@mixin borderT{
+    border: 1px solid black;
+}
+
+@mixin lineGradient ($c,$star:100%,$direction:'T',$end:transparent){
+    @if($direction == 'T'){
+        background:linear-gradient(to bottom,#{$c} -100%+$star, $end 100%);
+    }
+    @else if($direction == 'B'){
+        background:linear-gradient(to top,#{$c} -100%+$star, $end 100%);
+    }
+    @else {
+        background:linear-gradient($direction,#{$c} -100%+$star, $end 100%);
+
+    }
+}
+
+@mixin box($w,$c){
+    margin: 0 auto;
+    border-radius: $c;
+    @if($w == 100%){
+        width: $w;
+
+    }
+    @else{
+        width: 100%;
+        max-width: $w;
+
+    }
+
+}
+
+@mixin Lbutton($r,$bc) {
+    border-radius: $r;
+    background-color: $bc;
+}
